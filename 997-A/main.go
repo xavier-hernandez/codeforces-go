@@ -1,23 +1,25 @@
+// https://codeforces.com/problemset/problem/977/A
 package main
 
 import (
 	"fmt"
-	"os"
-	"strconv"
 )
 
 func main() {
-	argN, _ := strconv.Atoi(os.Args[1])
-	argK, _ := strconv.Atoi(os.Args[2])
+	var n int
+	fmt.Scanf("%d", &n)
 
-	for !(argK == 0) {
-		if argN%10 == 0 && argN > 0 {
-			argN = argN / 10
+	var k int
+	fmt.Scanf("%d", &k)
+
+	for !(k == 0) {
+		if n%10 == 0 && n > 0 {
+			n = n / 10
 		} else {
-			argN--
+			n--
 		}
-		argK--
+		k--
 	}
 
-	fmt.Println(argN)
+	fmt.Println(n)
 }
